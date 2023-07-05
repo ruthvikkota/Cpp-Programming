@@ -18,15 +18,21 @@ int main() {
             }
         }
     }
-
-    for(int i = 2; i < a+1; i++) {
-        if(p[i] == 0) {
-            if(a % i == 0) {
-                cout << i << endl;
-            }
+    int i = 2;
+    while (a!=0)
+     {
+        if(a % i == 0 && p[i] == 0) 
+        {
+            cout<<i<<endl;
+            a = a / i;
+        }
+        else
+        {
+            i=i+1;
         }
     }
 
+    
     delete[] p;
     return 0;
 }
