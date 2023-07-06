@@ -9,8 +9,14 @@ int fib(int n) {
     arr[n]=n;
     return n;
   }
-  arr[n]=fib(n - 1) + fib(n - 2);
-  return fib(n - 1) + fib(n - 2);
+  else//Memoization
+  {
+    if(arr[n]==-1)
+    {
+      arr[n]=fib(n - 1) + arr[n-2];
+    }
+    return fib(n - 1) + fib(n - 2);
+  }
 }
 
 int main() {
@@ -19,7 +25,7 @@ int main() {
   cout<<"Enter the number: ";
   cin >> n;
    for (int i = 0; i < n; i++) {
-        cout << fib(i) << endl;
+        cout << fib(i) << " ";
     }
   return 0;
 }
