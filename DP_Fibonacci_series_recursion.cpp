@@ -3,19 +3,23 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
+//Memoization
 int arr[100000];
 int fib(int n) {
+  if(arr[n]!=-1){
+    return arr[n];
+  }
   if (n<=1){
     arr[n]=n;
     return n;
   }
-  else//Memoization
+  else
   {
     if(arr[n]==-1)
     {
-      arr[n]=fib(n - 1) + arr[n-2];
+      arr[n]=fib(n-1) + fib(n-2);
     }
-    return fib(n - 1) + fib(n - 2);
+    return fib(n-1) + fib(n-2);
   }
 }
 
