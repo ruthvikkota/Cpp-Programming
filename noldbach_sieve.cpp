@@ -9,6 +9,7 @@ Input
 The first line of the input contains two integers n (2 S n and k (0 k S 1000).
 Output
 Output YES if at least k prime numbers from 2 to n inclusively can be expressed as it was described above. Otherwise output NO.*/
+//time complexity is O(n)
 
 #include <iostream>
 #include <cmath>
