@@ -2,7 +2,7 @@
 #include<queue>
 using namespace std;
 
-int m, n;
+int m=3, n=3;
 int a[1000][1000];
 bool visited[1000][1000];
 
@@ -42,8 +42,6 @@ void bfs(int i, int j) {
 }
 
 int main() {
-    cin >> m >> n;
-
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             cin >> a[i][j];
