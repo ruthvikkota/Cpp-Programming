@@ -3,9 +3,9 @@ using namespace std;
 
 void dfs(int curnode,vector<int>graph[],bool visited[]){
 	visited[curnode]=true;
+    cout<<curnode<<" ";
 	for(int j=0;j<graph[curnode].size();j++){
 		if(visited[graph[curnode][j]]==false){
-            cout<<graph[curnode][j]<<endl;
 			dfs(graph[curnode][j],graph,visited);
 		}
 	}
@@ -29,6 +29,6 @@ int main(){
 	bool visited[m+1];
 	memset(visited,false,sizeof(visited)/sizeof(visited[0]));
 	int curnode=0;
-    cout<<"Enter the depth first search order: ";
+    cout<<"The depth first search order is: \n";
 	dfs(curnode,graph,visited);
 }
