@@ -10,7 +10,6 @@ string palindrome(string str,int i,int j) {
     return palindrome(str,i+1,j-1);
   }
   return "Not Palindrome";
-  
 }
 
 int main() {
